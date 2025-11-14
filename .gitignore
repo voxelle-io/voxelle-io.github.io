@@ -1,0 +1,16 @@
+# Ignore operating system specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build artifacts and temporary files
+build/
+*.tmp
+*.log
+
+# Ignore dependency folders
+node_modules/
+vendor/
+
+# Ignore sensitive configuration files
+.env
+config.local.js
