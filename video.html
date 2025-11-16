@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,13 @@
     <!-- Use Inter font family -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0A0A0A; /* Deep Dark Background */
-            color: #F3F4F6; /* Light text for contrast */
+            background-color: #0A0A0A;
+            /* Deep Dark Background */
+            color: #F3F4F6;
+            /* Light text for contrast */
             scroll-behavior: smooth;
         }
 
@@ -20,37 +24,81 @@
         .neon-cyan {
             color: #35fdf3;
         }
+
         .bg-neon-cyan {
             background-color: #35fdf3;
         }
+
         .border-neon-cyan {
             border-color: #35fdf3;
         }
-        
+
         /* Neon Glow Effect on Buttons/Hover */
         .shadow-neon {
             box-shadow: 0 0 5px #35fdf3, 0 0 10px #35fdf380, 0 0 20px #35fdf340;
         }
+
         .shadow-neon-dark {
             box-shadow: 0 0 3px #35fdf340;
         }
+
         .card-glow:hover {
             box-shadow: 0 0 8px #35fdf3, 0 0 15px #35fdf380;
-            transform: translateY(-4px); /* Slight lift */
+            transform: translateY(-4px);
+            /* Slight lift */
             transition: all 0.3s ease-in-out;
             cursor: pointer;
         }
+
         .glitch-text {
             /* Subtle text shadow */
             text-shadow: 1px 1px 0px rgba(0, 255, 255, 0.5), -1px -1px 0px rgba(255, 0, 255, 0.5);
         }
+
         .scanline-bg {
-            /*  Add a subtle scanline effect */
+            /* subtle scanline effect */
             background-image: linear-gradient(to bottom, #0A0A0A 50%, #151515 50%);
             background-size: 100% 2px;
         }
+
+        /* Custom height for the banner container */
+        .banner-container {
+            height: 150px;
+            /* Adjust this value to control the visible height */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            /* Maintain aspect ratio */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Center the image */
+            min-width: 100%;
+            /* Ensure it covers the container width */
+            min-height: 100%;
+            /* Ensure it covers the container height */
+            object-fit: cover;
+            /* Fallback for browsers that don't support min-width/height with transform */
+        }
+
+        /* Gradient overlay for banner */
+        .banner-gradient {
+            background: linear-gradient(to top, #0A0A0A, transparent);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            /* gradient strength */
+        }
     </style>
 </head>
+
 <body class="scanline-bg min-h-screen">
 
     <!-- Navbar/Header -->
@@ -58,28 +106,41 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
             <!-- Logo and Title -->
             <div class="flex items-center space-x-3">
-                <img src="images/voxelleio.png" alt="Voxelle.io Logo" class="h-10 w-auto">
-                <h1 class="text-2xl font-extrabold tracking-widest uppercase neon-cyan glitch-text hidden sm:block">VOXELLE.IO</h1>
+                <img id="header-logo" src="images/voxelleio.png" alt="Voxelle.io Logo" class="h-10 w-auto"
+                    onerror="this.style.display='none';" />
+                <h1 class="text-2xl font-extrabold tracking-widest uppercase neon-cyan glitch-text hidden sm:block">
+                    VOXELLE.IO</h1>
             </div>
 
             <!-- Navigation Links -->
             <nav class="space-x-8 text-sm font-semibold tracking-wider">
                 <a href="index.html" class="hover:text-neon-cyan transition duration-200 uppercase">Home</a>
-                <a href="#contact" class="px-4 py-2 rounded-lg bg-[#1F2937] border border-neon-cyan shadow-neon-dark hover-glow transition duration-300 uppercase text-xs sm:text-sm">Contact // Connect</a>
+                <a href="#contact"
+                    class="px-4 py-2 rounded-lg bg-[#1F2937] border border-neon-cyan shadow-neon-dark hover-glow transition duration-300 uppercase text-xs sm:text-sm">//
+                    Contact</a>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Full-width Banner Section -->
+        <section id="main-banner" class="banner-container w-full border-b-2 border-neon-cyan shadow-lg relative">
+            <img src="images/voxelle-banner.png" alt="Cyberpunk cityscape banner with neon signs and a futuristic woman"
+                class="opacity-80" onerror="document.getElementById('main-banner').style.display='none';" />
+            <div class="banner-gradient"></div>
+        </section>
         <!-- Portfolio Hero/Title Section -->
         <section id="video-hero" class="pt-20 pb-16 md:pt-32 md:pb-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p class="text-sm md:text-base tracking-[0.3em] uppercase text-gray-500 mb-2">Video & Post-Synth // Archive 02</p>
-                <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4 border-l-8 pl-6 border-neon-cyan">
+                <p class="text-sm md:text-base tracking-[0.3em] uppercase text-gray-500 mb-2">Video & Post-Synth //
+                    Archive 02</p>
+                <h2
+                    class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4 border-l-8 pl-6 border-neon-cyan">
                     <span class="neon-cyan glitch-text">VISUAL</span> FLUX
                 </h2>
                 <p class="max-w-3xl text-lg md:text-xl text-gray-400">
-                    Precision compositing, cinematic video production, and dynamic motion graphics to realize the full spectrum of your visual narrative.
+                    Precision compositing, cinematic video production, and dynamic motion graphics to realize the full
+                    spectrum of your visual narrative.
                 </p>
             </div>
         </section>
@@ -87,43 +148,78 @@
         <!-- Project Grid Section -->
         <section id="projects" class="py-12 md:py-20 border-t border-gray-900">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <h3 class="text-2xl font-bold uppercase tracking-wider mb-8 text-gray-300">
                     <span class="neon-cyan">//</span> FEATURED VISUAL ARTIFACTS
                 </h3>
 
                 <!-- Project Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
+
                     <!-- Project Card 1 -->
                     <div class="card-glow p-6 bg-[#1A1A1A] rounded-xl border border-gray-700 transition duration-300">
                         <div class="text-neon-cyan mb-3">
                             <!-- Icon: Magic Wand / VFX -->
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.052A4 4 0 0116 3.016v0a4 4 0 01-4 4h-.001m.001 0V3m.001 4h-.001m-2.197 5.766L4.542 20.01M9 14.5a2.5 2.5 0 005 0 2.5 2.5 0 00-5 0zm10.5-5.5a2.5 2.5 0 00-5 0 2.5 2.5 0 005 0zM12 21a2.5 2.5 0 005 0 2.5 2.5 0 00-5 0z"></path></svg>
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11.049 2.052A4 4 0 0116 3.016v0a4 4 0 01-4 4h-.001m.001 0V3m.001 4h-.001m-2.197 5.766L4.542 20.01M9 14.5a2.5 2.5 0 005 0 2.5 2.5 0 00-5 0zm10.5-5.5a2.5 2.5 0 00-5 0 2.5 2.5 0 005 0zM12 21a2.5 2.5 0 005 0 2.5 2.5 0 00-5 0z">
+                                </path>
+                            </svg>
                         </div>
                         <h4 class="text-xl font-bold uppercase tracking-wide text-white mb-1">60/40 (Remix)</h4>
                         <p class="text-sm neon-cyan mb-4">Service: Full Creative, Software Test</p>
-                        <p class="text-gray-400 text-sm">Created an AI music video for a song previously written and remixed in Suno using Color42's unique lipsync models and generative AI video workflow. Title card, credits, and a few transitions were added in Final Cut Pro.</p>
+                        <p class="text-gray-400 text-sm">Created an AI music video for a song previously written and
+                            remixed in Suno using Color42's unique lipsync models and generative AI video workflow.
+                            Title card, credits, and a few transitions were added in Final Cut Pro.</p>
                         <div class="mt-4 flex justify-between items-center">
                             <span class="text-xs text-gray-500 uppercase">Client: Color42</span>
-                            <a href="https://www.youtube.com/watch?v=TTCun-IYk3s" class="text-sm neon-cyan hover:underline">Watch &rarr;</a>
+                            <a href="https://www.youtube.com/watch?v=TTCun-IYk3s"
+                                class="text-sm neon-cyan hover:underline">Watch &rarr;</a>
                         </div>
                     </div>
-
                 </div>
-
-                <!-- Call to Action -->
-                <div class="text-center mt-16 pt-8 border-t border-gray-800">
-                    <p class="text-gray-400 mb-6 text-xl">
-                        Ready to synthesize your next visual narrative? Get in touch with us today.
-                    </p>
-                    <a href="#contact" class="inline-block px-8 py-3 text-lg rounded-xl bg-neon-cyan text-gray-900 font-bold uppercase tracking-wider shadow-neon hover-glow transition duration-300">
-                        Initiate Video Project
-                    </a>
-                </div>
-
             </div>
         </section>
+
+        <!-- Projects Archive Navigation -->
+        <section id="archive-nav" class="py-10 md:py-16 border-t border-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-xl font-bold uppercase tracking-wider mb-8 text-gray-500">// PROJECTS ARCHIVE</h3>
+                <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold uppercase">
+                    <!-- Music -->
+                    <a href="music.html"
+                        class="px-4 py-2 rounded-full border border-gray-700 hover:border-neon-cyan text-gray-400 hover:text-neon-cyan transition duration-200">Music
+                        Engineering</a>
+
+                    <!-- Video (Active) -->
+                    <span
+                        class="px-4 py-2 rounded-full border border-neon-cyan bg-[#00FFFF20] text-neon-cyan cursor-default">//
+                        Video & Post-Synth</span>
+
+                    <!-- Virtual Production -->
+                    <a href="vp.html"
+                        class="px-4 py-2 rounded-full border border-gray-700 hover:border-neon-cyan text-gray-400 hover:text-neon-cyan transition duration-200">Virtual
+                        Production</a>
+
+                    <!-- Other Projects -->
+                    <a href="other.html"
+                        class="px-4 py-2 rounded-full border border-gray-700 hover:border-neon-cyan text-gray-400 hover:text-neon-cyan transition duration-200">Software
+                        / Other Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-16 pt-8 border-t border-gray-800">
+            <p class="text-gray-400 mb-6 text-xl">
+                Ready to synthesize your next visual narrative? Get in touch with us today.
+            </p>
+            <a href="#contact"
+                class="inline-block px-8 py-3 text-lg rounded-xl bg-neon-cyan text-gray-900 font-bold uppercase tracking-wider shadow-neon hover-glow transition duration-300">
+                Initiate Video Project
+            </a>
+        </div>
 
         <!-- Contact Section Placeholder (Ensures smooth scroll works) -->
         <section id="contact" class="h-1 bg-transparent"></section>
@@ -150,4 +246,5 @@
         });
     </script>
 </body>
+
 </html>
