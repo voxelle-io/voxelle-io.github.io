@@ -1,247 +1,355 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VOXELLE.IO // Music Engineering Archive</title>
-    <!-- Load Tailwind CSS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="VOXELLE.IO Music Engineering // Sonic Architecture, Dolby Atmos, and Neural DSP for immersive audio experiences." />
+    <meta name="theme-color" content="#030305" />
+
+    <!-- Open Graph / Facebook / Discord -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://voxelle.io/music.html" />
+    <meta property="og:title" content="VOXELLE.IO // Music Engineering" />
+    <meta property="og:description"
+        content="Sonic Architecture, Dolby Atmos, and Neural DSP for immersive audio experiences." />
+    <meta property="og:image" content="images/voxelle-banner.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://voxelle.io/music.html" />
+    <meta property="twitter:title" content="VOXELLE.IO // Music Engineering" />
+    <meta property="twitter:description"
+        content="Sonic Architecture, Dolby Atmos, and Neural DSP for immersive audio experiences." />
+    <meta property="twitter:image" content="images/voxelle-banner.png" />
+
+    <link rel="canonical" href="https://voxelle.io/music.html" />
+    <title>VOXELLE.IO // Music Engineering</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Inter font family -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0A0A0A;
-            /* Deep Dark Background */
-            color: #F3F4F6;
-            /* Light text for contrast */
-            scroll-behavior: smooth;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Chakra+Petch:wght@300;400;500;600;700&family=Oxanium:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-cyan': '#00f3ff',
+                        'neon-orange': '#ff8c00',
+                        'deep-black': '#030305',
+                        'panel-black': '#0a0a0c',
+                        'tech-gray': '#8892b0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Chakra Petch', 'sans-serif'],
+                        tech: ['Oxanium', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 10s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                },
+            },
         }
-
-        /* Custom Neon Utilities */
-        .neon-cyan {
-            color: #35fdf3;
-        }
-
-        .bg-neon-cyan {
-            background-color: #35fdf3;
-        }
-
-        .border-neon-cyan {
-            border-color: #35fdf3;
-        }
-
-        /* Neon Glow Effect on Buttons/Hover (identical to index.html) */
-        .shadow-neon {
-            box-shadow: 0 0 5px #35fdf3, 0 0 10px #35fdf380, 0 0 20px #35fdf340;
-        }
-
-        .shadow-neon-dark {
-            box-shadow: 0 0 3px #35fdf340;
-        }
-
-        .card-glow:hover {
-            box-shadow: 0 0 8px #35fdf3, 0 0 15px #35fdf380;
-            transform: translateY(-4px);
-            /* Slight lift */
-            transition: all 0.3s ease-in-out;
-            cursor: pointer;
-        }
-
-        .glitch-text {
-            /* Subtle text shadow */
-            text-shadow: 1px 1px 0px rgba(0, 255, 255, 0.5), -1px -1px 0px rgba(255, 0, 255, 0.5);
-        }
-
-        .scanline-bg {
-            /* subtle scanline effect */
-            background-image: linear-gradient(to bottom, #0A0A0A 50%, #151515 50%);
-            background-size: 100% 2px;
-        }
-
-        /* Custom height for the banner container */
-        .banner-container {
-            height: 150px;
-            /* Adjust this value to control the visible height */
-            overflow: hidden;
-            position: relative;
-        }
-
-        .banner-container img {
-            width: 100%;
-            height: auto;
-            /* Maintain aspect ratio */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* Center the image */
-            min-width: 100%;
-            /* Ensure it covers the container width */
-            min-height: 100%;
-            /* Ensure it covers the container height */
-            object-fit: cover;
-            /* Fallback for browsers that don't support min-width/height with transform */
-        }
-
-        /* Gradient overlay for banner */
-        .banner-gradient {
-            background: linear-gradient(to top, #0A0A0A, transparent);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 50%;
-            /* gradient strength */
-        }
-    </style>
+    </script>
 </head>
 
-<body class="scanline-bg min-h-screen">
+<body class="bg-deep-black relative">
 
-    <!-- Navbar/Header (Identical to main page, link to index.html) -->
-    <header class="sticky top-0 z-50 bg-[#0A0A0A] bg-opacity-95 backdrop-blur-sm border-b border-gray-800 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
-            <!-- Logo and Title -->
-            <div class="flex items-center space-x-3">
-                <img id="header-logo" src="images/voxelleio.png" alt="Voxelle.io Logo" class="h-10 w-auto"
-                    onerror="this.style.display='none';" />
-                <h1 class="text-2xl font-extrabold tracking-widest uppercase neon-cyan glitch-text hidden sm:block">
-                    VOXELLE.IO</h1>
+    <!-- Navbar -->
+    <header id="navbar" class="fixed top-0 w-full z-[200] transition-all duration-500 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-4 group cursor-pointer">
+                    <div class="relative h-10 w-10 flex items-center justify-center">
+                        <div
+                            class="absolute inset-0 border border-neon-cyan/40 rotate-45 group-hover:rotate-90 transition-transform duration-500 group-hover:border-neon-orange/40">
+                        </div>
+                        <div
+                            class="absolute inset-0 border border-white/25 group-hover:scale-75 transition-transform duration-500">
+                        </div>
+                        <span
+                            class="font-display font-bold text-neon-cyan text-xl group-hover:text-neon-orange transition-colors">V</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="font-display font-bold tracking-widest text-lg text-white leading-none">VOXELLE</h1>
+                        <span
+                            class="font-tech text-xs tracking-[0.3em] text-neon-cyan/80 font-semibold group-hover:text-neon-orange/80 transition-colors">IO</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-12">
+                    <a href="index.html#portfolio"
+                        class="relative font-tech text-sm uppercase tracking-[0.2em] transition-all duration-300 group font-semibold text-gray-400 hover:text-white">
+                        Portfolio
+                        <span
+                            class="absolute -bottom-2 left-0 w-0 h-[1px] bg-neon-cyan transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#contact"
+                        class="relative font-tech text-sm uppercase tracking-[0.2em] transition-all duration-300 group font-semibold text-neon-orange/80 hover:text-neon-orange">
+                        Contact
+                        <span
+                            class="absolute -bottom-2 left-0 w-0 h-[1px] bg-neon-orange transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <div class="flex items-center gap-1 opacity-50">
+                        <div class="w-1 h-4 bg-white/20"></div>
+                        <div class="w-1 h-4 bg-white/40"></div>
+                        <div class="w-1 h-4 bg-neon-cyan/80"></div>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-neon-cyan transition-colors"
+                        aria-label="Toggle mobile menu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
             </div>
-
-            <!-- Navigation Links -->
-            <nav class="space-x-8 text-sm font-semibold tracking-wider">
-                <a href="index.html" class="hover:text-neon-cyan transition duration-200 uppercase">Home</a>
-                <a href="#contact"
-                    class="px-4 py-2 rounded-lg bg-[#1F2937] border border-neon-cyan shadow-neon-dark hover-glow transition duration-300 uppercase text-xs sm:text-sm">//
-                    Contact</a>
-            </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-deep-black/95 backdrop-blur-xl z-40 transition-transform duration-500 translate-x-full md:hidden">
+            <div class="flex flex-col items-center justify-center h-full space-y-8">
+                <a href="index.html"
+                    class="font-display text-2xl text-white hover:text-neon-cyan uppercase tracking-widest transition-colors">Home</a>
+                <a href="index.html#portfolio"
+                    class="font-display text-2xl text-gray-400 hover:text-white uppercase tracking-widest transition-colors">Portfolio</a>
+                <a href="index.html#contact"
+                    onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')"
+                    class="font-display text-2xl text-neon-orange hover:text-white uppercase tracking-widest transition-colors">Contact</a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <!-- Full-width Banner Section -->
-        <section id="main-banner" class="banner-container w-full border-b-2 border-neon-cyan shadow-lg relative">
-            <img src="images/voxelle-banner.png" alt="Cyberpunk cityscape banner with neon signs and a futuristic woman"
-                class="opacity-80" onerror="document.getElementById('main-banner').style.display='none';" />
-            <div class="banner-gradient"></div>
-        </section>
-        <!-- Portfolio Hero/Title Section -->
-        <section id="music-hero" class="pt-20 pb-16 md:pt-32 md:pb-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p class="text-sm md:text-base tracking-[0.3em] uppercase text-gray-500 mb-2">Music Engineering //
-                    Archive 01</p>
-                <h2
-                    class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4 border-l-8 pl-6 border-neon-cyan">
-                    <span class="neon-cyan glitch-text">SONIC</span> MANIFESTS
-                </h2>
-                <p class="max-w-3xl text-lg md:text-xl text-gray-400">
-                    A record of our finest audio production operations across genres.
-                </p>
-            </div>
-        </section>
+    <!-- Top Banner Background -->
+    <div
+        class="absolute top-0 left-0 w-full h-[400px] opacity-40 mix-blend-screen z-0 overflow-hidden pointer-events-none">
+        <img src="images/voxelle-banner.png" class="w-full h-full object-cover object-right grayscale contrast-125"
+            onerror="this.style.display='none'" />
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-deep-black/60 to-deep-black"></div>
+    </div>
 
-        <!-- Project Grid Section -->
-        <section id="projects" class="py-12 md:py-20 border-t border-gray-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative z-10 min-h-screen pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <a href="index.html#portfolio"
+                class="inline-flex items-center gap-2 text-gray-500 hover:text-neon-cyan mb-12 font-tech uppercase tracking-wider transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg> Return to Grid
+            </a>
 
-                <h3 class="text-2xl font-bold uppercase tracking-wider mb-8 text-gray-300">
-                    <span class="neon-cyan">//</span> FEATURED AUDIO ARTIFACTS
-                </h3>
-
-                <!-- Project Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                    <!-- Project Card 1 -->
-                    <div class="card-glow p-6 bg-[#1A1A1A] rounded-xl border border-gray-700 transition duration-300">
-                        <div class="text-neon-cyan mb-3">
-                            <!-- Icon: Master/Vinyl Record -->
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 19V6l12-3v13M9 19c0 1.105-1.79 2-4 2s-4-.895-4-2 1.79-2 4-2 4 .895 4 2zm12-3c0 1.105-1.79 2-4 2s-4-.895-4-2 1.79-2 4-2 4 .895 4 2zM9 10l12-3">
-                                </path>
-                            </svg>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+                <div>
+                    <div class="flex gap-1 mb-6">
+                        <div class="w-2 h-2 bg-neon-cyan"></div>
+                        <div class="w-2 h-2 bg-neon-cyan/50"></div>
+                        <div class="w-8 h-2 bg-neon-cyan/20"></div>
+                    </div>
+                    <h1 class="font-display text-5xl md:text-7xl text-white mb-8 leading-none drop-shadow-lg">Sonic
+                        <br /> <span class="text-gray-400">Architecture</span></h1>
+                    <p
+                        class="text-xl text-gray-300 font-light leading-relaxed max-w-lg border-l-2 border-neon-cyan pl-6 bg-deep-black/30 backdrop-blur-sm p-4 rounded-r">
+                        Constructing a wide variety of soundscapes using virtual and analog synthesis and digital
+                        production and mastering.</p>
+                </div>
+                <div class="relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-neon-cyan/20 to-orange-500/20 blur-3xl opacity-30">
+                    </div>
+                    <div
+                        class="relative bg-panel-black border border-white/10 aspect-video flex items-center justify-center overflow-hidden group cursor-pointer">
+                        <div
+                            class="absolute inset-0 bg-[url('images/studio.jpg')] bg-cover bg-center opacity-40 group-hover:opacity-60 transition-opacity duration-500 grayscale group-hover:grayscale-0">
                         </div>
-                        <h4 class="text-xl font-bold uppercase tracking-wide text-white mb-1">60/40 (Remix)</h4>
-                        <p class="text-sm neon-cyan mb-4">Project: Full Creative</p>
-                        <p class="text-gray-400 text-sm">Cyberpunk house song written and remixed in Suno. It was later
-                            remastered to be a more reasonable length for an AI music video.</p>
-                        <div class="mt-4 flex justify-between items-center">
-                            <span class="text-xs text-gray-500 uppercase"></span>
-                            <a href="https://www.youtube.com/watch?v=TTCun-IYk3s"
-                                class="text-sm neon-cyan hover:underline">Listen &rarr;</a>
-                        </div>
+                        <!-- <div class="w-20 h-20 rounded-full border-2 border-white flex items-center justify-center relative z-10 backdrop-blur-sm group-hover:scale-110 transition-transform">
+                 <svg class="fill-white text-white ml-1" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div> --->
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Projects Archive Navigation -->
-        <section id="archive-nav" class="py-10 md:py-16 border-t border-gray-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h3 class="text-xl font-bold uppercase tracking-wider mb-8 text-gray-500">// PROJECTS ARCHIVE</h3>
-                <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold uppercase">
-                    <!-- Music (Active) -->
-                    <span
-                        class="px-4 py-2 rounded-full border border-neon-cyan bg-[#00FFFF20] text-neon-cyan cursor-default">//
-                        Music Engineering</span>
-
-                    <!-- Video -->
-                    <a href="video.html"
-                        class="px-4 py-2 rounded-full border border-gray-700 hover:border-neon-cyan text-gray-400 hover:text-neon-cyan transition duration-200">Video
-                        & Post-Synth</a>
-
-                    <!-- Virtual Production -->
-                    <a href="vp.html"
-                        class="px-4 py-2 rounded-full border border-gray-700 hover:border-neon-cyan text-gray-400 hover:text-neon-cyan transition duration-200">Virtual
-                        Production</a>
-
-                    <!-- Other Projects -->
-                    <a href="other.html"
-                        class="px-4 py-2 rounded-full border border-gray-700 hover:border-neon-cyan text-gray-400 hover:text-neon-cyan transition duration-200">Software
-                        / Other Projects</a>
+            <div class="bg-[#080808] border-y border-white/10 py-12 mb-24">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="col-span-1 md:col-span-1">
+                        <h3 class="font-display text-2xl text-white mb-2 flex items-center gap-3">
+                            <svg class="text-neon-cyan" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                                <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                            </svg> Capabilities
+                        </h3>
+                        <p class="font-tech text-gray-500 text-sm">High-fidelity audio engineering, vocals and voice
+                            cloning, and sound design.</p>
+                    </div>
+                    <div
+                        class="col-span-1 md:col-span-2 flex flex-wrap gap-4 items-center justify-start md:justify-end">
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
+                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg><span
+                                class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">Logic
+                                Pro</span></div>
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
+                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg><span
+                                class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">Studio
+                                Instruments</span></div>
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
+                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg><span
+                                class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">Vocals</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
+                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg><span
+                                class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">Suno
+                                Pro</span></div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Call to Action -->
-        <div class="text-center mt-16 pt-8 border-t border-gray-800">
-            <p class="text-gray-400 mb-6 text-xl">
-                Looking for something specific? Request a deep dive into our full catalogue of music projects.
-            </p>
-            <a href="#contact"
-                class="inline-block px-8 py-3 text-lg rounded-xl bg-neon-cyan text-gray-900 font-bold uppercase tracking-wider shadow-neon hover-glow transition duration-300">
-                Start Your Project Today
-            </a>
+            <div class="pt-4">
+                <h2 class="font-display text-2xl text-white mb-10">Selected Works</h2>
+                <div class="space-y-4">
+                    <div
+                        class="group flex items-center justify-between p-6 bg-[#080808] border border-white/5 hover:border-neon-cyan/30 transition-all hover:bg-white/5">
+                        <div class="flex items-center gap-6">
+                            <div class="text-gray-600 font-mono">01</div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg group-hover:text-neon-cyan transition-colors">
+                                    60/40 (Remix)</h3>
+                                <p class="text-sm text-gray-500 font-tech uppercase">Original Song and House Remix</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-gray-600 font-mono text-sm">3:37</span>
+                            <button onclick="playTrack(this, 'media/6040Remix.mp3')"
+                                class="p-2 text-white hover:text-neon-cyan transition-colors focus:outline-none"
+                                title="Play Track">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- <div class="group flex items-center justify-between p-6 bg-[#080808] border border-white/5 hover:border-neon-cyan/30 transition-all hover:bg-white/5">
+                 <div class="flex items-center gap-6">
+                   <div class="text-gray-600 font-mono">02</div>
+                   <div>
+                     <h3 class="text-white font-bold text-lg group-hover:text-neon-cyan transition-colors">Title</h3>
+                     <p class="text-sm text-gray-500 font-tech uppercase">Genre</p>
+                   </div>
+                 </div>
+                 <div class="flex items-center gap-4">
+                    <span class="text-gray-600 font-mono text-sm">time</span>
+                    <button onclick="playTrack(this, 'audio/cyber_stalker.mp3')" class="p-2 text-white hover:text-neon-cyan transition-colors focus:outline-none" title="Play Track">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"></polygon></svg>
+                    </button>
+                 </div>
+             </div>-->
+                </div>
+            </div>
         </div>
+    </div>
 
-        <!-- Contact Section Placeholder (Ensure smooth scroll works) -->
-        <section id="contact" class="h-1 bg-transparent"></section>
-
-    </main>
-
-    <!-- Footer (Identical to main page) -->
-    <footer class="py-6 border-t border-gray-900 bg-[#0A0A0A]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
-            <p>&copy; 2025 VOXELLE.IO // All Rights Reserved // Digital Synthesis Platform</p>
+    <footer class="py-8 bg-deep-black border-t border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-center items-center gap-4">
+            <div class="flex flex-col items-center">
+                <span class="font-display font-bold text-white tracking-widest">VOXELLE.IO</span>
+                <p class="text-gray-600 text-[10px] font-tech tracking-[0.2em] mt-1">&copy; 2025 SYNTHESIS & PRODUCTION
+                </p>
+            </div>
         </div>
     </footer>
+    <div
+        class="fixed inset-0 pointer-events-none z-[50] mix-blend-overlay opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]">
+    </div>
+    <div
+        class="fixed inset-0 pointer-events-none z-[40] bg-[linear-gradient(rgba(18,16,20,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%] bg-repeat opacity-20">
+    </div>
 
     <script>
-        // Simple function to navigate to the contact section on the index page
-        document.addEventListener('DOMContentLoaded', () => {
-            const contactLinks = document.querySelectorAll('a[href="#contact"]');
-            contactLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    window.location.href = 'index.html#contact';
-                });
-            });
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-deep-black/90', 'backdrop-blur-md', 'border-b', 'border-white/25', 'py-4', 'shadow-[0_5px_20px_rgba(0,0,0,0.5)]');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-deep-black/90', 'backdrop-blur-md', 'border-b', 'border-white/25', 'py-4', 'shadow-[0_5px_20px_rgba(0,0,0,0.5)]');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
         });
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+        });
+
+        // Audio Player Logic
+        let currentAudio = null;
+        let currentBtn = null;
+        const playIcon = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"></polygon></svg>';
+        const stopIcon = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><rect x="9" y="9" width="6" height="6" fill="currentColor" stroke="none"></rect></svg>';
+
+        function playTrack(btn, src) {
+            if (currentBtn && currentBtn === btn) {
+                // Toggle Stop
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                }
+                btn.innerHTML = playIcon;
+                currentBtn = null;
+                currentAudio = null;
+                return;
+            }
+
+            // Stop previous
+            if (currentAudio) {
+                currentAudio.pause();
+                if (currentBtn) currentBtn.innerHTML = playIcon;
+            }
+
+            // Play new
+            currentAudio = new Audio(src);
+            currentBtn = btn;
+            btn.innerHTML = stopIcon;
+            currentAudio.play().catch(e => console.error("Playback failed:", e));
+
+            currentAudio.onended = () => {
+                btn.innerHTML = playIcon;
+                currentBtn = null;
+                currentAudio = null;
+            };
+        }
     </script>
 </body>
 

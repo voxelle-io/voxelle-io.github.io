@@ -1,0 +1,49 @@
+/* Global Body Styles */
+body {
+    background-color: #030305;
+    color: #e2e8f0;
+    cursor: crosshair;
+    overflow-x: hidden;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #030305;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff8c00;
+}
+
+/* Selection Color */
+::selection {
+    background: #00f3ff;
+    color: #000;
+}
+
+/* Utility Classes */
+.clip-corner {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.clip-corner-tl-br {
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+}
+
+/* Alias for clip-corner-tl-br used in VP page */
+.cyber-clip-both {
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+}
+
+.glow-cyan {
+    text-shadow: 0 0 10px rgba(0, 223, 255, 0.7);
+}
