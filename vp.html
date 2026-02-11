@@ -8,7 +8,6 @@
         content="VOXELLE.IO X4NTHA // Virtual avatar ecosystem, real-time motion capture, and interactive live streaming." />
     <meta name="theme-color" content="#050505" />
 
-    <!-- Open Graph / Facebook / Discord -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://voxelle.io/vp.html" />
     <meta property="og:title" content="VOXELLE.IO // X4NTHA" />
@@ -16,7 +15,6 @@
         content="Virtual avatar ecosystem, real-time motion capture, and interactive live streaming." />
     <meta property="og:image" content="images/voxelle-banner.png" />
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://voxelle.io/vp.html" />
     <meta property="twitter:title" content="VOXELLE.IO // X4NTHA" />
@@ -57,11 +55,9 @@
 
 <body class="bg-deep-black relative">
 
-    <!-- Navbar -->
     <header id="navbar" class="fixed top-0 w-full z-[200] transition-all duration-500 bg-transparent py-6">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center">
-                <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-4 group cursor-pointer">
                     <div class="relative h-10 w-10 flex items-center justify-center">
                         <div
@@ -80,7 +76,6 @@
                     </div>
                 </a>
 
-                <!-- Desktop Nav -->
                 <nav class="hidden md:flex items-center space-x-12">
                     <a href="index.html#portfolio"
                         class="relative font-tech text-sm uppercase tracking-[0.2em] transition-all duration-300 group font-semibold text-gray-400 hover:text-white">
@@ -94,14 +89,19 @@
                         <span
                             class="absolute -bottom-2 left-0 w-0 h-[1px] bg-neon-orange transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <div class="flex items-center gap-1 opacity-50">
-                        <div class="w-1 h-4 bg-white/20"></div>
-                        <div class="w-1 h-4 bg-white/40"></div>
-                        <div class="w-1 h-4 bg-neon-cyan/80"></div>
+                    <div class="grid grid-cols-3 gap-[2px] opacity-80 select-none">
+                        <div class="w-1 h-1 bg-neon-cyan"></div>
+                        <div class="w-1 h-1 bg-transparent"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/40"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/20"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/90"></div>
+                        <div class="w-1 h-1 bg-transparent"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/50"></div>
+                        <div class="w-1 h-1 bg-white/80"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/20"></div>
                     </div>
                 </nav>
 
-                <!-- Mobile Menu Toggle -->
                 <div class="md:hidden">
                     <button id="mobile-menu-btn" class="text-white hover:text-neon-cyan transition-colors"
                         aria-label="Toggle mobile menu">
@@ -115,7 +115,6 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu"
             class="fixed inset-0 bg-deep-black/95 backdrop-blur-xl z-40 transition-transform duration-500 translate-x-full md:hidden">
             <div class="flex flex-col items-center justify-center h-full space-y-8">
@@ -175,7 +174,7 @@
                                 class="text-[#00dfff]">COLD</span>. THE TAKES ARE <span
                                 class="text-[#ff00df]">HOT</span>.</p>
                         <p class="text-gray-400 leading-relaxed mb-8 border-l-2 border-[#ff00df]/30 pl-6">Virtual avatar
-                            ecosystem. Twitch stream coming soon. Real-time motion capture, Unreal Engine rendering,
+                            ecosystem. Twitch stream (coming soon). Real-time motion capture, Unreal Engine rendering,
                             game development, and variety video and music production.</p>
                         <div class="flex flex-wrap gap-4">
                             <span
@@ -204,6 +203,65 @@
                     FLUX</span>
             </div>
 
+            <div class="mb-24">
+                <div
+                    class="border border-white/10 bg-[#0a0a0c] p-1 rounded-sm overflow-hidden group/card hover:border-[#00dfff]/30 transition-colors duration-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <div onclick="loadEmbed(this, 'I6EUFsOHsjw')"
+                            class="group relative aspect-video bg-gray-900 overflow-hidden cursor-pointer lg:order-last">
+                            <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                style="background-image: url('https://img.youtube.com/vi/I6EUFsOHsjw/maxresdefault.jpg')">
+                            </div>
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full border border-[#00dfff]/50 flex items-center justify-center bg-black/50 backdrop-blur-sm group-hover:scale-110 group-hover:border-[#00dfff] group-hover:bg-black/70 transition-all duration-300">
+                                <svg class="fill-white text-white ml-1" width="32" height="32" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="p-8 lg:p-12 flex flex-col justify-center relative bg-[#0e0e10]">
+                            <div
+                                class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#00dfff] via-[#ff00df] to-transparent opacity-50 group-hover/card:opacity-100 transition-opacity">
+                            </div>
+                            <div class="mb-5 flex items-center gap-3">
+                                <span
+                                    class="px-2 py-1 bg-[#00dfff]/10 border border-[#00dfff]/30 text-[#00dfff] text-[10px] font-tech tracking-widest uppercase">Latest
+                                    Release</span>
+                                <span class="text-gray-600 text-xs font-mono">// 2026.01</span>
+                            </div>
+                            <h2 class="font-display text-4xl md:text-5xl text-white mb-6">FROST <span
+                                    class="text-[#00dfff]">BYTES</span></h2>
+                            <p class="text-gray-400 leading-relaxed mb-6 font-light">
+                                "Frost Bytes" is an immersive Unreal Engine 5 virtual production experiment where X4NTHA
+                                performs a live-coded <span class="text-gray-200 font-medium">Tidal Cycles</span>
+                                electronic music set, orchestrating a soundscape that is visually mirrored by
+                                audio-reactive shaders, data-driven scene elements, and a real-time generative AI Aurora
+                                Borealis that leverages a custom LoRA to respond to audio parameters and prompt
+                                injection.
+                            </p>
+                            <div class="mt-auto pt-6 border-t border-white/5">
+                                <p class="text-gray-500 text-sm italic mb-4">
+                                    Created entirely from scratch in two weeks for the Daydream Interactive AI Video
+                                    Program's Scope track.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="text-xs font-mono text-[#ff00df] bg-[#ff00df]/5 border border-[#ff00df]/20 px-2 py-1">#UE5</span>
+                                    <span
+                                        class="text-xs font-mono text-[#00dfff] bg-[#00dfff]/5 border border-[#00dfff]/20 px-2 py-1">#LiveCoding</span>
+                                    <span
+                                        class="text-xs font-mono text-[#dfff00] bg-[#dfff00]/5 border border-[#dfff00]/20 px-2 py-1">#GenerativeAI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div
                     class="bg-black border border-zinc-800 rounded overflow-hidden flex flex-col h-full shadow-[0_0_30px_rgba(0,223,255,0.05)]">
@@ -227,7 +285,7 @@
                             <span class="text-[#ff00df] block mb-1">Virtual Production and Video:</span>
                             <ul class="pl-4 border-l border-zinc-700 text-gray-500 space-y-1">
                                 <li>&gt; Unreal Engine 5</li>
-                                <li>&gt; SlimeVR</li>
+                                <li>&gt; Motion Capture Systems</li>
                                 <li>&gt; Apple ARKit</li>
                             </ul>
                         </div>
@@ -235,6 +293,7 @@
                             <span class="text-[#dfff00] block mb-1">Sculpting and Design:</span>
                             <ul class="pl-4 border-l border-zinc-700 text-gray-500 space-y-1">
                                 <li>&gt; ZBrush</li>
+                                <li>&gt; Blender</li>
                                 <li>&gt; Adobe Substance</li>
                                 <li>&gt; Marvelous Designer</li>
                                 <li>&gt; Reallusion</li>
@@ -278,7 +337,7 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-center items-center gap-4">
             <div class="flex flex-col items-center">
                 <span class="font-display font-bold text-white tracking-widest">VOXELLE.IO</span>
-                <p class="text-gray-600 text-[10px] font-tech tracking-[0.2em] mt-1">&copy; 2025 SYNTHESIS & PRODUCTION
+                <p class="text-gray-600 text-[10px] font-tech tracking-[0.2em] mt-1">&copy; 2026 SYNTHESIS & PRODUCTION
                 </p>
             </div>
         </div>
@@ -302,6 +361,19 @@
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('translate-x-full');
         });
+
+        function loadEmbed(element, videoId) {
+            const iframe = document.createElement('iframe');
+            iframe.setAttribute('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1');
+            iframe.setAttribute('width', '100%');
+            iframe.setAttribute('height', '100%');
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.classList.add('absolute', 'inset-0', 'w-full', 'h-full');
+            element.innerHTML = '';
+            element.appendChild(iframe);
+        }
     </script>
 </body>
 

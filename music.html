@@ -8,20 +8,16 @@
         content="VOXELLE.IO Music Engineering // Virtual and analog synthesis, digital production, and mastering." />
     <meta name="theme-color" content="#030305" />
 
-    <!-- Open Graph / Facebook / Discord -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://voxelle.io/music.html" />
     <meta property="og:title" content="VOXELLE.IO // Music Engineering" />
-    <meta property="og:description"
-        content="Virtual and analog synthesis, digital production, and mastering." />
+    <meta property="og:description" content="Virtual and analog synthesis, digital production, and mastering." />
     <meta property="og:image" content="images/voxelle-banner.png" />
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://voxelle.io/music.html" />
     <meta property="twitter:title" content="VOXELLE.IO // Music Engineering" />
-    <meta property="twitter:description"
-        content="Virtual and analog synthesis, digital production, and mastering." />
+    <meta property="twitter:description" content="Virtual and analog synthesis, digital production, and mastering." />
     <meta property="twitter:image" content="images/voxelle-banner.png" />
 
     <link rel="canonical" href="https://voxelle.io/music.html" />
@@ -59,13 +55,11 @@
     </script>
 </head>
 
-<body class="bg-deep-black relative">
+<body class="bg-deep-black relative overflow-x-hidden">
 
-    <!-- Navbar -->
     <header id="navbar" class="fixed top-0 w-full z-[200] transition-all duration-500 bg-transparent py-6">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center">
-                <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-4 group cursor-pointer">
                     <div class="relative h-10 w-10 flex items-center justify-center">
                         <div
@@ -84,7 +78,6 @@
                     </div>
                 </a>
 
-                <!-- Desktop Nav -->
                 <nav class="hidden md:flex items-center space-x-12">
                     <a href="index.html#portfolio"
                         class="relative font-tech text-sm uppercase tracking-[0.2em] transition-all duration-300 group font-semibold text-gray-400 hover:text-white">
@@ -98,14 +91,19 @@
                         <span
                             class="absolute -bottom-2 left-0 w-0 h-[1px] bg-neon-orange transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <div class="flex items-center gap-1 opacity-50">
-                        <div class="w-1 h-4 bg-white/20"></div>
-                        <div class="w-1 h-4 bg-white/40"></div>
-                        <div class="w-1 h-4 bg-neon-cyan/80"></div>
+                    <div class="grid grid-cols-3 gap-[2px] opacity-80 select-none">
+                        <div class="w-1 h-1 bg-neon-cyan/40"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/80"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/40"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/60"></div>
+                        <div class="w-1 h-1 bg-white"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/60"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/80"></div>
+                        <div class="w-1 h-1 bg-neon-cyan"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/80"></div>
                     </div>
                 </nav>
 
-                <!-- Mobile Menu Toggle -->
                 <div class="md:hidden">
                     <button id="mobile-menu-btn" class="text-white hover:text-neon-cyan transition-colors"
                         aria-label="Toggle mobile menu">
@@ -119,7 +117,6 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu"
             class="fixed inset-0 bg-deep-black/95 backdrop-blur-xl z-40 transition-transform duration-500 translate-x-full md:hidden">
             <div class="flex flex-col items-center justify-center h-full space-y-8">
@@ -134,7 +131,6 @@
         </div>
     </header>
 
-    <!-- Top Banner Background -->
     <div
         class="absolute top-0 left-0 w-full h-[400px] opacity-40 mix-blend-screen z-0 overflow-hidden pointer-events-none">
         <img src="images/voxelle-banner.png" class="w-full h-full object-cover object-right grayscale contrast-125"
@@ -161,11 +157,12 @@
                         <div class="w-8 h-2 bg-neon-cyan/20"></div>
                     </div>
                     <h1 class="font-display text-5xl md:text-7xl text-white mb-8 leading-none drop-shadow-lg">Sonic
-                        <br /> <span class="text-gray-400">Architecture</span></h1>
+                        <br /> <span class="text-gray-400">Architecture</span>
+                    </h1>
                     <p
                         class="text-xl text-gray-300 font-light leading-relaxed max-w-lg border-l-2 border-neon-cyan pl-6 bg-deep-black/30 backdrop-blur-sm p-4 rounded-r">
-                        Constructing a wide variety of soundscapes using virtual and analog synthesis, digital
-                        production, and mastering.</p>
+                        Constructing a wide variety of soundscapes using virtual and analog instrumentation, digital
+                        production, and professional mastering.</p>
                 </div>
                 <div class="relative">
                     <div
@@ -180,9 +177,9 @@
                 </div>
             </div>
 
-            <div class="bg-[#080808] border-y border-white/10 py-12 mb-24">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="col-span-1 md:col-span-1">
+            <div class="bg-[#080808] border border-white/10 p-8 md:p-12 rounded-sm mb-24 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    <div class="col-span-1">
                         <h3 class="font-display text-2xl text-white mb-2 flex items-center gap-3">
                             <svg class="text-neon-cyan" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -192,39 +189,37 @@
                                 <line x1="12" y1="20" x2="12.01" y2="20"></line>
                             </svg> Capabilities
                         </h3>
-                        <p class="font-tech text-gray-500 text-sm">High-fidelity audio engineering, vocals and voice
+                        <p class="font-tech text-gray-500 text-sm">High-fidelity audio engineering, songwriting, vocals, voice
                             cloning, and sound design.</p>
                     </div>
                     <div
                         class="col-span-1 md:col-span-2 flex flex-wrap gap-4 items-center justify-start md:justify-end">
-                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
-                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
+                        <div
+                            class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 hover:border-neon-cyan/50 transition-colors cursor-default">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
                                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                             </svg><span
                                 class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">Logic
-                                Pro</span></div>
-                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
-                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
-                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                            </svg><span
-                                class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">Studio
-                                Instruments</span></div>
-                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
-                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
+                                Pro</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 hover:border-neon-cyan/50 transition-colors cursor-default">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
                                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                             </svg><span
                                 class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">Vocals</span>
                         </div>
-                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
-                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
+                        <div
+                            class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 hover:border-neon-cyan/50 transition-colors cursor-default">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
                                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                             </svg><span
                                 class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">Suno
-                                Pro</span></div>
+                                Pro</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,107 +231,152 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    
-                    <!-- Portfolio Item 01 -->
-                    <div class="group clip-corner-tl-br bg-panel-black/50 border border-white/10 p-6 hover:border-neon-cyan/50 hover:bg-white/5 transition-all duration-500 relative flex flex-col">
-                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-                            <span class="font-display font-bold text-4xl text-white">01</span>
-                        </div>
 
-                        <!-- Instagram Embed Container -->
-                        <div class="w-full flex justify-center mb-8 relative z-10 min-h-[500px] bg-black/40 rounded-sm">
-                           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DRsh3bLjMAu/" data-instgrm-version="14" style=" background:#000; border:0; border-radius:3px; box-shadow:none; margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                           </blockquote> 
-                        </div>
+                    <a href="https://www.instagram.com/reel/DRsh3bLjMAu/" target="_blank" rel="noopener noreferrer"
+                        class="group relative h-full block perspective-[1000px]">
+                        <div
+                            class="clip-corner-tl-br h-full bg-panel-black/50 backdrop-blur-md border border-white/25 p-6 transition-all duration-500 group-hover:border-neon-cyan/50 group-hover:bg-white/5 group-hover:-translate-y-1 group-hover:shadow-[0_10px_40px_-10px_rgba(0,243,255,0.15)] relative overflow-hidden flex flex-col">
 
-                        <!-- Details -->
-                        <div class="mt-auto border-t border-white/10 pt-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-display text-2xl text-white group-hover:text-neon-cyan transition-colors">Snowblind</h3>
-                                <span class="px-2 py-1 bg-neon-cyan/10 text-neon-cyan font-mono text-[10px] border border-neon-cyan/20">2025</span>
+                            <div
+                                class="absolute inset-0 bg-grid-pattern opacity-0 group-hover:opacity-15 transition-opacity duration-500">
                             </div>
-                            <p class="font-tech text-sm text-gray-400 mb-4 uppercase tracking-wider">Production / Mixing / Mastering</p>
-                            <p class="font-sans text-sm text-gray-400 leading-relaxed opacity-80 mb-4">
-                                An ambient glitch-ballad track designed to suit a cyberpunk aesthetic.
-                            </p>
-                            <div class="flex gap-2">
-                                <span class="text-[10px] font-mono text-gray-500 border border-white/10 px-2 py-1">#Cyberpunk</span>
-                                <span class="text-[10px] font-mono text-gray-500 border border-white/10 px-2 py-1">#MusicVideo</span>
+
+                            <div
+                                class="absolute top-0 right-0 p-6 font-display font-bold text-5xl text-white/20 group-hover:text-neon-cyan/20 transition-colors select-none tracking-tighter z-0">
+                                01
+                            </div>
+
+                            <div class="relative z-10 flex flex-col h-full">
+
+                                <div
+                                    class="w-full flex justify-center mb-8 relative z-20 min-h-[500px] bg-black/40 rounded-sm overflow-hidden border border-white/5 group-hover:border-neon-cyan/20 transition-colors">
+                                    <blockquote class="instagram-media"
+                                        data-instgrm-permalink="https://www.instagram.com/reel/DRsh3bLjMAu/"
+                                        data-instgrm-version="14"
+                                        style=" background:#000; border:0; border-radius:3px; box-shadow:none; margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                                    </blockquote>
+                                </div>
+
+                                <div class="mt-auto border-t border-white/10 pt-6">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3
+                                            class="font-display text-2xl text-white group-hover:text-neon-cyan transition-colors">
+                                            Snowblind</h3>
+                                        <span
+                                            class="px-2 py-1 bg-neon-cyan/10 text-neon-cyan font-mono text-[10px] border border-neon-cyan/20 group-hover:bg-neon-cyan group-hover:text-deep-black transition-colors">2025</span>
+                                    </div>
+                                    <p
+                                        class="font-tech text-sm text-gray-400 mb-4 uppercase tracking-wider group-hover:text-gray-300 transition-colors">
+                                        Production / Mixing
+                                        / Mastering</p>
+                                    <p
+                                        class="font-sans text-sm text-gray-400 leading-relaxed opacity-80 mb-6 group-hover:opacity-100 transition-opacity">
+                                        Ambient cyberpunk glitch-ballad track.
+                                    </p>
+                                    <div class="flex gap-2">
+                                        <span
+                                            class="text-[10px] font-mono text-gray-500 border border-white/10 px-2 py-1 group-hover:border-neon-cyan/30 group-hover:text-neon-cyan transition-colors">#Cyberpunk</span>
+                                        <span
+                                            class="text-[10px] font-mono text-gray-500 border border-white/10 px-2 py-1 group-hover:border-neon-cyan/30 group-hover:text-neon-cyan transition-colors">#MusicVideo</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-neon-cyan to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            </div>
+                            <div
+                                class="absolute top-0 left-0 w-[2px] h-full bg-gradient-to-b from-transparent via-neon-cyan to-transparent opacity-0 group-hover:opacity-50 transition-all duration-500">
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <!-- Portfolio Item 02 -->
-                    <div class="group clip-corner-tl-br bg-panel-black/50 border border-white/10 p-6 hover:border-neon-cyan/50 hover:bg-white/5 transition-all duration-500 relative flex flex-col">
-                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-                            <span class="font-display font-bold text-4xl text-white">02</span>
-                        </div>
+                    <a href="https://www.instagram.com/reel/DR71R1yktC9/" target="_blank" rel="noopener noreferrer"
+                        class="group relative h-full block perspective-[1000px]">
+                        <div
+                            class="clip-corner-tl-br h-full bg-panel-black/50 backdrop-blur-md border border-white/25 p-6 transition-all duration-500 group-hover:border-neon-cyan/50 group-hover:bg-white/5 group-hover:-translate-y-1 group-hover:shadow-[0_10px_40px_-10px_rgba(0,243,255,0.15)] relative overflow-hidden flex flex-col">
 
-                        <!-- Instagram Embed Container -->
-                        <div class="w-full flex justify-center mb-8 relative z-10 min-h-[500px] bg-black/40 rounded-sm">
-                            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DR71R1yktC9/" data-instgrm-version="14" style=" background:#000; border:0; border-radius:3px; box-shadow:none; margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                            </blockquote>
-                        </div>
-
-                        <!-- Details -->
-                        <div class="mt-auto border-t border-white/10 pt-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-display text-2xl text-white group-hover:text-neon-cyan transition-colors">Cyber-Idol</h3>
-                                <span class="px-2 py-1 bg-neon-cyan/10 text-neon-cyan font-mono text-[10px] border border-neon-cyan/20">2025</span>
+                            <div
+                                class="absolute inset-0 bg-grid-pattern opacity-0 group-hover:opacity-15 transition-opacity duration-500">
                             </div>
-                            <p class="font-tech text-sm text-gray-400 mb-4 uppercase tracking-wider">Production / Mixing / Mastering</p>
-                            <p class="font-sans text-sm text-gray-400 leading-relaxed opacity-80 mb-4">
-                                High-energy hyperpop idol anthem for a cyberpunk visual narrative.
-                            </p>
-                            <div class="flex gap-2">
-                                <span class="text-[10px] font-mono text-gray-500 border border-white/10 px-2 py-1">#Cyberpunk</span>
-                                <span class="text-[10px] font-mono text-gray-500 border border-white/10 px-2 py-1">#Animation</span>
+
+                            <div
+                                class="absolute top-0 right-0 p-6 font-display font-bold text-5xl text-white/20 group-hover:text-neon-cyan/20 transition-colors select-none tracking-tighter z-0">
+                                02
+                            </div>
+
+                            <div class="relative z-10 flex flex-col h-full">
+
+                                <div
+                                    class="w-full flex justify-center mb-8 relative z-20 min-h-[500px] bg-black/40 rounded-sm overflow-hidden border border-white/5 group-hover:border-neon-cyan/20 transition-colors">
+                                    <blockquote class="instagram-media"
+                                        data-instgrm-permalink="https://www.instagram.com/reel/DR71R1yktC9/"
+                                        data-instgrm-version="14"
+                                        style=" background:#000; border:0; border-radius:3px; box-shadow:none; margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                                    </blockquote>
+                                </div>
+
+                                <div class="mt-auto border-t border-white/10 pt-6">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3
+                                            class="font-display text-2xl text-white group-hover:text-neon-cyan transition-colors">
+                                            Cyber-Idol</h3>
+                                        <span
+                                            class="px-2 py-1 bg-neon-cyan/10 text-neon-cyan font-mono text-[10px] border border-neon-cyan/20 group-hover:bg-neon-cyan group-hover:text-deep-black transition-colors">2025</span>
+                                    </div>
+                                    <p
+                                        class="font-tech text-sm text-gray-400 mb-4 uppercase tracking-wider group-hover:text-gray-300 transition-colors">
+                                        Production / Mixing
+                                        / Mastering</p>
+                                    <p
+                                        class="font-sans text-sm text-gray-400 leading-relaxed opacity-80 mb-6 group-hover:opacity-100 transition-opacity">
+                                        High-energy hyperpop cyber-idol anthem.
+                                    </p>
+                                    <div class="flex gap-2">
+                                        <span
+                                            class="text-[10px] font-mono text-gray-500 border border-white/10 px-2 py-1 group-hover:border-neon-cyan/30 group-hover:text-neon-cyan transition-colors">#Cyberpunk</span>
+                                        <span
+                                            class="text-[10px] font-mono text-gray-500 border border-white/10 px-2 py-1 group-hover:border-neon-cyan/30 group-hover:text-neon-cyan transition-colors">#Animation</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-neon-cyan to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            </div>
+                            <div
+                                class="absolute top-0 left-0 w-[2px] h-full bg-gradient-to-b from-transparent via-neon-cyan to-transparent opacity-0 group-hover:opacity-50 transition-all duration-500">
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
-            <div class="pt-4">
-                <h2 class="font-display text-2xl text-white mb-10">Full Tracks</h2>
-                <div class="space-y-4">
-                    <div
-                        class="group flex items-center justify-between p-6 bg-[#080808] border border-white/5 hover:border-neon-cyan/30 transition-all hover:bg-white/5">
-                        <div class="flex items-center gap-6">
-                            <div class="text-gray-600 font-mono">01</div>
-                            <div>
-                                <h3 class="text-white font-bold text-lg group-hover:text-neon-cyan transition-colors">
-                                    60/40 (Remix)</h3>
-                                <p class="text-sm text-gray-500 font-tech uppercase">Original Song and House Remix</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <span class="text-gray-600 font-mono text-sm">3:37</span>
-                            <button onclick="playTrack(this, 'media/6040Remix.mp3')"
-                                class="p-2 text-white hover:text-neon-cyan transition-colors focus:outline-none"
-                                title="Play Track">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"></polygon>
-                                </svg>
-                            </button>
+        </div>
+        <div class="pt-4">
+            <h2 class="font-display text-2xl text-white mb-10">Full Tracks</h2>
+            <div class="space-y-4">
+                <div
+                    class="group flex items-center justify-between p-6 bg-[#080808] border border-white/5 hover:border-neon-cyan/30 transition-all hover:bg-white/5">
+                    <div class="flex items-center gap-6">
+                        <div class="text-gray-600 font-mono">01</div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg group-hover:text-neon-cyan transition-colors">
+                                60/40 (Remix)</h3>
+                            <p class="text-sm text-gray-500 font-tech uppercase">Original Song and House Remix</p>
                         </div>
                     </div>
-                    <!-- <div class="group flex items-center justify-between p-6 bg-[#080808] border border-white/5 hover:border-neon-cyan/30 transition-all hover:bg-white/5">
-                 <div class="flex items-center gap-6">
-                   <div class="text-gray-600 font-mono">02</div>
-                   <div>
-                     <h3 class="text-white font-bold text-lg group-hover:text-neon-cyan transition-colors">Title</h3>
-                     <p class="text-sm text-gray-500 font-tech uppercase">Genre</p>
-                   </div>
-                 </div>
-                 <div class="flex items-center gap-4">
-                    <span class="text-gray-600 font-mono text-sm">time</span>
-                    <button onclick="playTrack(this, 'audio/cyber_stalker.mp3')" class="p-2 text-white hover:text-neon-cyan transition-colors focus:outline-none" title="Play Track">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"></polygon></svg>
-                    </button>
-                 </div>
-             </div>-->
+                    <div class="flex items-center gap-4">
+                        <span class="text-gray-600 font-mono text-sm">3:37</span>
+                        <button onclick="playTrack(this, 'media/6040Remix.mp3')"
+                            class="p-2 text-white hover:text-neon-cyan transition-colors focus:outline-none"
+                            title="Play Track">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"></polygon>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -346,7 +386,7 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-center items-center gap-4">
             <div class="flex flex-col items-center">
                 <span class="font-display font-bold text-white tracking-widest">VOXELLE.IO</span>
-                <p class="text-gray-600 text-[10px] font-tech tracking-[0.2em] mt-1">&copy; 2025 SYNTHESIS & PRODUCTION
+                <p class="text-gray-600 text-[10px] font-tech tracking-[0.2em] mt-1">&copy; 2026 SYNTHESIS & PRODUCTION
                 </p>
             </div>
         </div>
@@ -414,8 +454,7 @@
                 currentAudio = null;
             };
         }
-        </script>
-    <!-- Instagram Embed Script -->
+    </script>
     <script async src="//www.instagram.com/embed.js"></script>
 </body>
 

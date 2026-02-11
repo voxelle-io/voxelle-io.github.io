@@ -53,7 +53,7 @@
     </script>
 </head>
 
-<body class="bg-deep-black relative">
+<body class="bg-deep-black relative overflow-x-hidden">
 
     <!-- Navbar -->
     <header id="navbar" class="fixed top-0 w-full z-[200] transition-all duration-500 bg-transparent py-6">
@@ -92,10 +92,16 @@
                         <span
                             class="absolute -bottom-2 left-0 w-0 h-[1px] bg-neon-orange transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <div class="flex items-center gap-1 opacity-50">
-                        <div class="w-1 h-4 bg-white/20"></div>
-                        <div class="w-1 h-4 bg-white/40"></div>
-                        <div class="w-1 h-4 bg-neon-cyan/80"></div>
+                    <div class="grid grid-cols-3 gap-[2px] opacity-80 select-none">
+                        <div class="w-1 h-1 bg-neon-cyan"></div>
+                        <div class="w-1 h-1 bg-neon-cyan"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/40"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/20"></div>
+                        <div class="w-1 h-1 bg-white"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/60"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/40"></div>
+                        <div class="w-1 h-1 bg-neon-cyan/20"></div>
+                        <div class="w-1 h-1 bg-transparent"></div>
                     </div>
                 </nav>
 
@@ -156,7 +162,8 @@
                         <div class="w-8 h-2 bg-neon-cyan/20"></div>
                     </div>
                     <h1 class="font-display text-5xl md:text-7xl text-white mb-8 leading-none drop-shadow-lg">Visual
-                        <br /> <span class="text-gray-400">Synthesis</span></h1>
+                        <br /> <span class="text-gray-400">Synthesis</span>
+                    </h1>
                     <p
                         class="text-xl text-gray-300 font-light leading-relaxed max-w-lg border-l-2 border-neon-cyan pl-6 bg-deep-black/30 backdrop-blur-sm p-4 rounded-r">
                         Full-spectrum video production, motion graphics, and VFX compositing for digital broadcast and
@@ -178,9 +185,9 @@
             </div>
 
             <!-- Capabilities Bar -->
-            <div class="bg-[#080808] border-y border-white/10 py-12 mb-24">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="col-span-1 md:col-span-1">
+            <div class="bg-[#080808] border border-white/10 p-8 md:p-12 rounded-sm mb-24 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    <div class="col-span-1">
                         <h3 class="font-display text-2xl text-white mb-2 flex items-center gap-3">
                             <svg class="text-neon-cyan" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -194,31 +201,35 @@
                         </p>
                     </div>
                     <div
-                        class="col-span-1 md:col-span-2 flex flex-wrap gap-4 items-center justify-start md:justify-end">
-                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
-                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
+                        class="col-span-1 lg:col-span-2 flex flex-wrap gap-4 items-center justify-start lg:justify-end">
+                        <div
+                            class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 hover:border-neon-cyan/50 transition-colors cursor-default">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
                                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                             </svg><span
                                 class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">Final Cut
                                 Pro</span></div>
-                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
-                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
+                        <div
+                            class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 hover:border-neon-cyan/50 transition-colors cursor-default">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
                                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                             </svg><span
                                 class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">Adobe</span>
                         </div>
-                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
-                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
+                        <div
+                            class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 hover:border-neon-cyan/50 transition-colors cursor-default">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
                                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                             </svg><span
                                 class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">ComfyUI</span>
                         </div>
-                        <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2"><svg width="12"
-                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
+                        <div
+                            class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 hover:border-neon-cyan/50 transition-colors cursor-default">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-neon-cyan">
                                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                             </svg><span class="font-tech text-sm text-gray-300 uppercase tracking-wider font-medium">Veo
                                 3.1</span></div>
@@ -278,7 +289,7 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-center items-center gap-4">
             <div class="flex flex-col items-center">
                 <span class="font-display font-bold text-white tracking-widest">VOXELLE.IO</span>
-                <p class="text-gray-600 text-[10px] font-tech tracking-[0.2em] mt-1">&copy; 2025 SYNTHESIS & PRODUCTION
+                <p class="text-gray-600 text-[10px] font-tech tracking-[0.2em] mt-1">&copy; 2026 SYNTHESIS & PRODUCTION
                 </p>
             </div>
         </div>
